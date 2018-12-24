@@ -155,7 +155,43 @@ do {
     // an error was thrown
 }
 
+func makeASandwich() throws {
+    
+}
 
+func eatASandwich() {
+    
+}
+func buyGroceries() {
+    
+}
+
+/*
+do {
+    try makeASandwich()
+     eatASandwich()
+} catch Error.OutOfCleanDishes {
+    buyGroceries()
+} catch Error.MissingIngredients(let ingredients) {
+    buyGroceries()
+}
+*/
+
+//代码执行只要在 if age >= 0 评定为 true 时才会继续，就是说，如果 age 的值非负。如果 age 的值是负数，在上文的代码当中， age >= 0 评定为 false ，断言就会被触发，终止应用。
+let age = -3
+assert(age >= 0, "A person's age cannot be less than zero")
+
+assert(age > 10)
+if age > 10 {
+    print("You can ride the roller-coaster or the ferris wheel.")
+} else if age > 0 {
+    print("You can ride the ferris wheel.")
+} else {
+    assertionFailure("A person's age can't be less than zero.")
+}
+
+//使用先决条件来检测下标没有越界，或者检测函数是否收到了一个合法的值。 如果条件的结果是 false 信息就会显示出来
+precondition(age > 0, "Index must be greater than zero.")
 
 
 
