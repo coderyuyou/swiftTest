@@ -118,6 +118,44 @@ if convertedNumber != nil {
     print("convertedNumber has an integer value of \(convertedNumber!).")
 }
 
+//如果  Int(possibleNumber)  返回的可选 Int 包含一个值，将这个可选项中的值赋予一个叫做 actualNumber 的新常量。
+if let actualNumber = Int(possibleNumber) {
+    print("\'\(possibleNumber)\' has an integer value of \(actualNumber)")
+} else {
+    print("\'\(possibleNumber)\' could not be converted to an integer")
+}
+
+if let firstNumber = Int("4"), let secondNumber = Int("42"), firstNumber < secondNumber && secondNumber < 100 {
+     print("\(firstNumber) < \(secondNumber) < 100")
+}
+
+
+let possibleString: String? = "an optional string."
+let forcedString: String = possibleString!
+
+let assumedString: String! = "an implicitly unwrapped optional string."
+let implicitString: String = assumedString
+
+if assumedString != nil {
+    print(assumedString)
+}
+
+if let definiteString = assumedString {
+    print(definiteString)
+}
+
+func canThrowAnError() throws {
+    // this function may or may not throw an error
+}
+
+do {
+    try canThrowAnError()
+    // no error was thrown
+} catch {
+    // an error was thrown
+}
+
+
 
 
 
